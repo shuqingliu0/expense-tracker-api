@@ -53,3 +53,4 @@ class TestViews(TestCase):
 
         expense = models.Expense.objects.all()
         self.assertEqual(len(expense), len(json_res))
+        # self.assertEqual(expense["merchant"], json_res[1])

@@ -9,7 +9,7 @@ class ExpenseListCreate(APIView):
     def get(self, request):
         expenses = models.Expense.objects.all()
 
-        all_expense = [model_to_dict(expenses) for expense in expenses]
+        all_expense = [model_to_dict(expense) for expense in expenses]
         return Response(all_expense, status=200)
 
     def post(self, request):
